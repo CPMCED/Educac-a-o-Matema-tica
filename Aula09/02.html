@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>EDUCAÇÃO MATEMÁTICA</title>
+	<link href="css/impressao.css" type="text/css" rel="stylesheet" media="print" />
+	<link href="css/grid.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="css/vtip.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet"  media="screen" />
+	<link href="css/smoothness/jquery-ui-1.8.11.custom.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="css/layout.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="css/tema.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/formularios.css" type="text/css" rel="stylesheet" media="screen" />
+	
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+	<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+	<script type="text/javascript" src="js/jquery.serialScroll-min.js"></script>
+	<script type="text/javascript" src="js/jquery.coda-slider-2.0.js"></script>
+	<script type="text/javascript" src="js/ufc.js"></script>
+	<script type="text/javascript" src="js/vtip.js"></script>
+	<script type="text/javascript" src="js/fluidtextresizer.js"></script>
+	<script type="text/javascript" src="js/jquery.simpleSlide_min.js"></script>
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.autoscroll.js"></script>
+    <script type="text/javascript" src="flash/jwplayer/jwplayer.html5.js"></script>
+	<script type="text/javascript" src="flash/jwplayer/jwplayer.js"></script>
+    <script src="js/jcanvas.min.js" language="javascript"></script>
+	<script src="js/criarCanvas.js" language="javascript"></script>
+    <script src="js/animarBaloes.js" language="javascript"></script>
+    <script src="js/f1.js" language="javascript"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			
+		});
+		var redimensionarFonte = new fluidtextresizer({
+			controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+			targets: ["p", "li", "h1", "h2", "h3", "tr",".slideshow"], //.generic p, li, .quadro p, h2, h3 - target elements to resize text within: ["selector1", "selector2", etc]
+			levels: 1, //number of levels users can magnify (or shrink) text
+			persist: "none", //enter "session" or "none"
+			animate: 200 //animation duration of text resize. Enter 0 to disable
+		})
+	</script>
+	<style type="text/css" media="screen">
+		
+	</style>
+	<!--[if IE 7]>
+	<style type="text/css" media="screen">
+		#nav > li > ul > li {
+			margin-left:-15px;
+			width:230px;
+		}
+		.audio-player-toolbar > button {
+			float:left;
+			display:block;
+			background-color:white;
+		}
+		.audio-progressbar {
+			width:100px !important;
+			display:block;
+			float:left;
+			margin-left:5px;
+			margin-top:2px;
+		}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<div class="linha" id="cabecalho">
+		<div class="titulos">
+			<h1 style="font-style: italic;">CURSO DE APERFEIÇOAMENTO EM EDUCAÇÃO MATEMÁTICA</h1>
+			<h2>Aula 09: Geometria Espacial no GeoGebra</h2>
+		</div>
+	</div>
+	<div class="linha" id="navegacao">
+		<ul id="nav" class="coluna lateral">
+			<li id="nav-menu"><a href="#"><img src="layout/menu-menu.png" width="20" height="20" alt="Menu" /></a>
+				<ul>
+					<li><a href="01.html">Apresentação</a></li>
+					<li><a href="02.html">Tópico 01: Geometria espacial</a></li>
+                    <li><a href="03.html">Atividades</a></li>
+				</ul>
+			</li>
+			<li><a href="01.html"><img src="layout/menu-anterior.png" width="20" height="20" alt="Tópico Anterior" title="Tópico Anterior" class="mouseover"/></a></li>
+			<li><a href="03.html"><img src="layout/menu-proximo.png" width="20" height="20" alt="Próximo Tópico" title="Próximo Tópico" class="mouseover"/></a></li>
+			<li><a href="javascript:redimensionarFonte.setFontLevel('smaller')"><img src="layout/menu-fonte_reduzir.png" width="20" height="20" alt="Reduzir Fonte" title="Reduzir Fonte" class="mouseover" /></a></li>
+			<li><a href="javascript:redimensionarFonte.setFontLevel('bigger')"><img src="layout/menu-fonte_aumentar.png" width="20" height="20" alt="Aumentar Fonte" title="Aumentar Fonte" class="mouseover" /></a></li>
+			<li><a href="#" id="menu_constrate"><img src="layout/menu-contraste.png" width="20" height="20" alt="Contraste" title="Contraste" class="mouseover" /></a></li>
+
+			<li><a href="pdf/01.pdf" target="_blank"><img src="layout/menu-impressao.png" width="20" height="20" alt="Versão para Impressão" title="Versão para Impressão" class="mouseover" /></a></li>
+		</ul>
+		<div id="topico" class="coluna principal">
+			<h2>Tópico 01: Geometria espacial</h2>
+		</div>
+	</div>
+	
+    <br/>
+    
+	
+	<div class="linha">
+		<div class="coluna lateral">		
+			<br/>		
+		</div>
+		 <div class="coluna principal">
+		 <p align="justify"><big>A geometria espacial foi inserida apenas na recente versão 5.0 do software e possivelmente ainda vai sofrer algumas (ou muitas) alterações e acréscimos. A barra de ferramentas da geometria espacial sofreu poucas mas significativas alterações. O que vamos ver aqui é o que foi acrescido (ou alterado) em cada ícone na barra de ferramentas. Mas antes de vermos os novos ícones e suas funções, vamos ver brevemente como abrir a janela de visualização em 3D.</big></p>
+		 <br/>
+		 <br/>
+		
+		<font color = "red">EFEITO TEXTO RETRATIL</P>
+					INÍCIO DO EFEITO:</P></font>
+		<p align="justify"><big>Assim que você abre o GeoGebra a janela que aparece é a janela comum em 2D. Para abrir a janela de visualização em 3D, clique em exibir e depois clique em janela de visualização 3D como mostra a figura abaixo:</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem1.png" /></p>
+		 
+		 <p align="justify"><big>Após abrir a janela de visualização 3D, feche a janela de visualização 2D (se preferir) para melhor explorarmos essa função:</big></p>
+		 <br/>
+		 <br/>
+		
+		<p align=”Left” >
+		<img src="imagens/02/imagem2.png" /></p>
+		 <p align="justify"><big>A figura acima mostra 3 eixos de cores diferentes: o eixo vermelho é o eixo do X, o eixo verde é o eixo do Y e o eixo azul é o eixo do Z. Na figura acima tem um plano que contém os eixos X e Y.
+		 <p>Caso queira configurar essa janela de visualização clique com o botão direito sobre a janela como mostra a figura e clique em “Janela de Visualização...” :</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem3.png" /></p>
+		 
+		 <p align="justify"><big>Na próxima janela que será aberta você poderá configurar alguns conceitos básicos e também poderá configurar cada eixo separadamente.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem4.png" /></p>
+		 
+		 <p align="justify"><big>A barra de ferramentas nesse tipo de visualização é reduzida em relação à barra 2D. Para inserir as funções da barra 2D na barra de ferramentas 3D clique em ferramentas e depois em configurar a barra de ferramentas.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem5.png" /></p>
+		 <font color = "red">FINAL DO EFEITO.</font></p>
+		 <p align="justify"><big>Assim como a janela de visualização, a barra de ferramentas também ganhou novos ícones direcionados ao estudo da geometria espacial. </big></p>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		<img src="imagens/02/imagem6.png" /></p>
+		<p align="justify"><big>Vamos a eles:</big></p>
+		<font color = "red">EFEITO DEGRADÊ</P>
+					INÍCIO DO EFEITO:</P></font>
+		 <p align=”Left” >
+		 
+		 <img src="imagens/02/imagem7.png" /></p>
+		 
+		 <p align="justify"><big>Permite que você trace uma reta paralela a um plano. Para isso selecione um ponto e após selecione um plano e uma reta perpendicular ao plano passando pelo ponto selecionado será criada.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem8.png" /></p>
+		 
+		 <p align="justify"><big>Cria um círculo centrado em um dos eixos. Crie um ponto qualquer, clique em um dos eixos e depois no ponto criado para criar um círculo com centro sobre o eixo selecionado e paralelo ao outros dois eixos.</big></p>
+		 <br/>
+		 <br/>
+		 </div>
+		 </div>
+		 
+		 
+		 <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/41357/width/806/height/568/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem9.png" /></p>
+		 
+		 <p align="justify"><big>Para utilizar esse recurso primeiro crie um vetor (direcionado de acordo com o circulo que você deseja criar). Clique em algum lugar no espaço onde deseja que seja o centro do círculo, depois clique no vetor e insira o valor do raio e um círculo será criado de acordo com o centro, tamanho do raio e direção que você escolheu.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem10.png" /></p>
+		 
+		 <p align="justify"><big>Clique em duas figuras que tem interseção para criar uma curva de interseção entre as duas superfícies.</big></p>
+		 <br/>
+		 <br/>
+		</div>
+		</div>
+		
+		<div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/41357/width/806/height/568/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem11.png" /></p>
+		 
+		 <p align="justify"><big>Você pode criar um plano qualquer. Para isso você precisa clicar em três pontos ou inseri-los na janela de entrada abaixo da janela de visualização. Lembrando que para criar um ponto a partir da janela de entrada digite uma letra maiúscula para designar um ponto, clique no sinal de “igual” no teclado, abra parênteses e digite os 3 números, separados por ponto e vírgula. Por exemplo : P = (2;-3;1).</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem12.png" /></p>
+		 
+		 <p align="justify"><big>Versão mais ampla do ícone anterior. Através dele além de criar um plano por 3 pontos, você também pode criar um plano de outras 3 maneiras diferentes: selecionando um ponto e uma reta, selecionando duas retas ou selecionando um polígono.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem13.png" /></p>
+		 
+		 <p align="justify"><big>Para esse ícone você vai precisar de um ponto e uma reta. Clicando no ponto e depois na reta irá criar um plano que contém o ponto selecionado e perpendicular à reta selecionada.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 </div>
+		 </div>
+		 
+		 <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/277519/width/1456/height/779/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+			
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem14.png" /></p>
+		 
+		 <p align="justify"><big>Para esse recurso você vai precisar de um plano e um ponto. Clique no ponto e depois no plano para criar um plano paralelo ao plano selecionado que contém o ponto selecionado.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem15.png" /></p>
+		 
+		 <p align="justify"><big>Vamos começar a desenhar as figuras geométricas espaciais. Para desenhar uma pirâmide, desenhe um polígono qualquer que será a base da pirâmide e depois escolha um ponto desejado para ser o vértice da pirâmide.</big></p>
+		 <br/>
+		 <br/>
+		 </div>
+		 </div>
+		 
+		 <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/19853/width/1264/height/630/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+			
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem16.png" /></p>
+		 
+		 <p align="justify"><big>Crie um ponto e um polígono para ser uma das bases do prisma. Selecione o polígono e após selecione um ponto para criar um prisma (reto ou obliquo) sendo que a outra base contém o ponto selecionado anteriormente.</big></p>
+		 <br/>
+		 <br/>
+		 </div>
+		 </div>
+		 
+		  <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/284/width/800/height/600/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+			
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem17.png" /></p>
+		 
+		 <p align="justify"><big>Crie dois pontos, selecione-os (o primeiro ponto selecionado será o centro da base e o segundo ponto selecionado será o vértice do cone) e por fim digite o tamanho do raio para criar um cone qualquer que contém os pontos selecionados.</big></p>
+		 <br/>
+		 <br/>
+		 </div>
+		 </div>
+		 
+		 <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/19226/width/1264/height/630/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+			
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem18.png" /></p>
+		 
+		 <p align="justify"><big>Basta seguir a mesma explicação para criar um cone, onde os dois pontos selecionados será os centros das bases do cilindro.</big></p>
+		 <br/>
+		 <br/>
+		 </div>
+		 </div>
+		 
+		  <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/195977/width/1152/height/737/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+			
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem19.png" /></p>
+		 
+		 <p align="justify"><big>Clique em um plano e em dois pontos para criar um tetraedro regular.</big></p>
+		 <br/>
+		 <br/>
+		 </div>
+		 </div>
+		 
+		 <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/153529/width/800/height/503/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem20.png" /></p>
+		 
+		 <p align="justify"><big>Siga a mesma explicação para criar um tetraedro regular, selecione um plano e dois pontos para criar um cubo.</big></p>
+		 <br/>
+		 <br/>
+		 </div>
+		 </div>
+		 
+		 <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/153529/width/800/height/503/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+			
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem21.png" /></p>
+		 
+		 <p align="justify"><big>Permite criar uma pirâmide reta ou cone reto. Basta clicar no polígono que servirá de base e digite a altura desejada.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem22.png" /></p>
+		 
+		 <p align="justify"><big>A explicação anterior serve também para esse ícone e assim você pode criar um prisma reto ou cilindro reto.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem23.png" /></p>
+		 
+		 <p align="justify"><big>Recurso bastante interessante para planificar qualquer poliedro. Clique no poliedro para planificá-lo. Infelizmente ainda não é possível planificar os corpos redondos, quem sabe numa atualização futura né?</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem24.png" /></p>
+		 
+		 <p align="justify"><big>Selecione dois pontos. O primeiro será o centro da esfera e o segundo será um ponto pertencente à superfície da mesma. </big></p>
+		 <br/>
+		 <br/>
+		 </div>
+		 </div>
+		 
+		 <div class="linha">
+		 <div class="coluna lateral">			
+			<img src="layout/fique_por_dentro.png" width="100" height="110"/>		
+		 </div>
+		 <div class="coluna principal quadro ">
+			<p align="justify"><big><a href="https://tube.geogebra.org/material/iframe/id/266411/width/1382/height/647/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5"target="_blank">https://tube.geogebra.org/material/.../preferhtml5</a></big></p>
+			
+		
+		 </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem25.png" /></p>
+		 
+		 <p align="justify"><big>Um pouco diferente do ícone anterior. Nesse você digita o tamanho do raio após selecionar um ponto para ser seu centro.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem26.png" /></p>
+		 
+		 <p align="justify"><big>Clique na figura espacial e automaticamente irá aparecer o seu volume.</big></p>
+		 <br/>
+		 <br/>
+				 
+		 <p align=”Left” >
+		 <img src="imagens/02/imagem27.png" /></p>
+		 
+		 <p align="justify"><big>Selecione um ponto e um plano para criar um novo ponto refletido em relação ao plano.</big></p>
+		 <br/>
+		 <br/>
+		  <font color = "red">FINAL DO EFEITO.</font></p>
+		 </div>
+		 </div>
+		  <div class="linha">
+		 <div class="coluna lateral">			
+			<img src="layout/professora.png" width="100" height="110"/>		
+		 </div>
+		 <div class="coluna principal quadro ">
+			<p align="justify"><big>Encerramos aqui a explicação de toda a barra de ferramentas, plana e espacial, do software geogebra 5.0. Não nos aprofundaremos em todo a funcionalidade do geogebra, mas no portal <a href="https://tube.geogebra.org/"target="_blank">https://tube.geogebra.org/</a> você vai encontrar todo tipo de material de apoio tanto para sua aula quanto para sua aprendizagem. O bom desse portal é que você também pode postar materiais, o uso desse portal é livre tanto para downloads quanto para uploads.</big></p>
+		 
+		 
+		  </div>
+		 <div class="coluna principal">
+		 <br/>
+		 <br/>
+		 <p align="justify"><big>Vamos agora exercitar o que vimos nessa aula, bom estudo!</big></p>
+		 </div>
+		 </div>
+  
+  			
+  			
+	<div class="linha">
+		<div id="rodape">
+			<ul id="rodape_navegacao">
+				<li><a href="#topo" title="Retornar ao topo da página">Topo</a></li>
+				<li><a href="01.html" title="Ir para o Tópico Anterior">Tópico Anterior</a></li>
+				<li><a href="03.html" title="Ir para o Próximo Tópico">Próximo Tópico</a></li>
+
+				<li><a href="pdf/01.pdf" title="Versão para Impressão" target="_blank">Versão para Impressão</a></li>
+			</ul>
+			<a href="http://www.virtual.ufc.br" target="_blank" id="logo-ufcv" class="logo"><img src="layout/logo-ufc_virtual-color.png" alt="Logo UFC" width="40" height="40" /></a>
+			<a href="http://www.ufc.br" target="_blank" id="logo-ufc" class="logo"><img src="layout/logo-ufc-color.png" alt="Logo UFC Virtual" width="35" height="45" /></a>
+			<p>Responsável: </p>
+			<p>Centro de Educação a Distância do Ceará - CED</p>
+		</div>
+	</div>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+    </script>
+</body>
+</html>

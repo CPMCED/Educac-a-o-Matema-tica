@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>EDUCAÇÃO MATEMÁTICA</title>
+	<link href="css/impressao.css" type="text/css" rel="stylesheet" media="print" />
+	<link href="css/grid.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="css/vtip.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet"  media="screen" />
+	<link href="css/smoothness/jquery-ui-1.8.11.custom.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="css/layout.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="css/tema.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/formularios.css" type="text/css" rel="stylesheet" media="screen" />
+	
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+	<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+	<script type="text/javascript" src="js/jquery.serialScroll-min.js"></script>
+	<script type="text/javascript" src="js/jquery.coda-slider-2.0.js"></script>
+	<script type="text/javascript" src="js/ufc.js"></script>
+	<script type="text/javascript" src="js/vtip.js"></script>
+	<script type="text/javascript" src="js/fluidtextresizer.js"></script>
+	<script type="text/javascript" src="js/jquery.simpleSlide_min.js"></script>
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.autoscroll.js"></script>
+    <script type="text/javascript" src="flash/jwplayer/jwplayer.html5.js"></script>
+	<script type="text/javascript" src="flash/jwplayer/jwplayer.js"></script>
+    <script src="js/jcanvas.min.js" language="javascript"></script>
+	<script src="js/criarCanvas.js" language="javascript"></script>
+    <script src="js/animarBaloes.js" language="javascript"></script>
+    <script src="js/f1.js" language="javascript"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			
+		});
+		var redimensionarFonte = new fluidtextresizer({
+			controlsdiv: "sizecontroldiv", //id of special div containing your resize controls. Enter "" if not defined
+			targets: ["p", "li", "h1", "h2", "h3", "tr",".slideshow"], //.generic p, li, .quadro p, h2, h3 - target elements to resize text within: ["selector1", "selector2", etc]
+			levels: 1, //number of levels users can magnify (or shrink) text
+			persist: "none", //enter "session" or "none"
+			animate: 200 //animation duration of text resize. Enter 0 to disable
+		})
+	</script>
+	<style type="text/css" media="screen">
+		
+	</style>
+	<!--[if IE 7]>
+	<style type="text/css" media="screen">
+		#nav > li > ul > li {
+			margin-left:-15px;
+			width:230px;
+		}
+		.audio-player-toolbar > button {
+			float:left;
+			display:block;
+			background-color:white;
+		}
+		.audio-progressbar {
+			width:100px !important;
+			display:block;
+			float:left;
+			margin-left:5px;
+			margin-top:2px;
+		}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<div class="linha" id="cabecalho">
+		<div class="titulos">
+			<h1 style="font-style: italic;">CURSO DE APERFEIÇOAMENTO EM EDUCAÇÃO MATEMÁTICA</h1>
+			<h2>Aula 08: Geometria plana no GeoGebra</h2>
+		</div>
+	</div>
+	<div class="linha" id="navegacao">
+		<ul id="nav" class="coluna lateral">
+			<li id="nav-menu"><a href="#"><img src="layout/menu-menu.png" width="20" height="20" alt="Menu" /></a>
+				<ul>
+					<li><a href="01.html">Apresentação</a></li>
+					<li><a href="02.html">Tópico 01: Polígonos</a></li>
+                    <li><a href="03.html">Tópico 02: Circunferências e arcos</a></li>
+                    <li><a href="04.html">Tópico 03: Cônicas</a></li>
+                    <li><a href="05.html">Atividades</a></li>
+                    <li><a href="06.html">QUER APRENDER A FAZER ANIMAÇÕES NO GEOGEBRA?</a></li>
+
+				</ul>
+			</li>
+			<li><a href="03.html"><img src="layout/menu-anterior.png" width="20" height="20" alt="Tópico Anterior" title="Tópico Anterior" class="mouseover"/></a></li>
+			<li><a href="05.html"><img src="layout/menu-proximo.png" width="20" height="20" alt="Próximo Tópico" title="Próximo Tópico" class="mouseover"/></a></li>
+			<li><a href="javascript:redimensionarFonte.setFontLevel('smaller')"><img src="layout/menu-fonte_reduzir.png" width="20" height="20" alt="Reduzir Fonte" title="Reduzir Fonte" class="mouseover" /></a></li>
+			<li><a href="javascript:redimensionarFonte.setFontLevel('bigger')"><img src="layout/menu-fonte_aumentar.png" width="20" height="20" alt="Aumentar Fonte" title="Aumentar Fonte" class="mouseover" /></a></li>
+			<li><a href="#" id="menu_constrate"><img src="layout/menu-contraste.png" width="20" height="20" alt="Contraste" title="Contraste" class="mouseover" /></a></li>
+
+			<li><a href="pdf/01.pdf" target="_blank"><img src="layout/menu-impressao.png" width="20" height="20" alt="Versão para Impressão" title="Versão para Impressão" class="mouseover" /></a></li>
+		</ul>
+		<div id="topico" class="coluna principal">
+			<h2>Tópico 03: Cônicas</h2>
+		</div>
+	</div>
+	
+    <br/>
+    
+	
+	<div class="linha">
+		<div class="coluna lateral">		
+			<br/>		
+		</div>
+		 <div class="coluna principal">
+		<font color = "red">EFEITO TEXTO RETRÁTIL</P>
+					INÍCIO DO EFEITO:</P></font>
+		<p align=”Left” >
+		<img src="imagens/04/imagem16.png" /></p>
+		 <p align="justify"><big>O próximo ícone é destinado ao estudo das cônicas.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem17.png" /></p>
+		 
+		 <p align="justify"><big>Você precisa selecionar 3 pontos. Os dois primeiros serão os focos e o terceiro ponto pertencerá à elipse.</big></p>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem18.png" /></p>
+		 
+		 <p align="justify"><big>Similar à elipse. Primeiro você seleciona os dois focos e o terceiro ponto pertencerá à hipérbole.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem19.png" /></p>
+		 
+		 <p align="justify"><big>Antes de usar essa função você precisa criar uma reta que será a diretriz da parábola. Depois crie um ponto que será o foco e por último clique na reta que você criou para traçar a parábola.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem20.png" /></p>
+		 
+		 <p align="justify"><big>Nessa função você cria 4 pontos quaisquer e a cônica produzida dependerá da posição do 5º ponto.</big></p>
+		 <br/>
+		 <br/>	
+		 
+		 <p align=”Left” >
+		<img src="imagens/04/imagem21.png" /></p>
+		 <p align="justify"><big>O próximo ícone trata de ângulos, perímetro, área e lista.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem22.png" /></p>
+		 
+		 <p align="justify"><big>Você precisa de objetos que sejam concorrentes ou polígonos. Lembrando que para calcular o ângulo interno clique nos dois lados no sentido anti-horário e para calcular o ângulo externo clique nos dois lados no sentido horário.</big></p>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem23.png" /></p>
+		 
+		 <p align="justify"><big>Para utilizar esse recurso você precisa de um ponto e um objeto que tenha vértice (segmento ou polígono). Primeiro clique no ponto e depois no vértice e aparecerá uma caixa onde você precisa indicar a medida do ângulo e o sentido (horário ou anti-horário). Um novo ponto irá aparecer e basta traçar um segmento do primeiro ponto até o vértice e depois outro segmento do novo ponto até o vértice.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem24.png" /></p>
+		 
+		 <p align="justify"><big>Calcula qualquer tipo de distância, comprimento ou perímetro. São várias as possibilidades: ponto-ponto, ponto-reta, reta-reta, ponto-eixo, entre outros.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem25.png" /></p>
+		 
+		 <p align="justify"><big>Calcula a área de qualquer polígono, círculo ou elipse, basta clicar sobre o objeto para aparecer automaticamente à medida da área.</big></p>
+		 <br/>
+		 <br/>	
+		 
+		  <p align=”Left” >
+		 <img src="imagens/04/imagem26.png" /></p>
+		 
+		 <p align="justify"><big>Clique sobre uma reta, semirreta ou segmento para aparecer o valor da inclinação.</big></p>
+		 <br/>
+		 <br/>	
+		 
+		 <p align=”Left” >
+		<img src="imagens/04/imagem27.png" /></p>
+		 <p align="justify"><big>Arraste e marque os objetos para listar as coordenadas e equações dos objetos selecionados.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem28.png" /></p>
+		 
+		 <p align="justify"><big>O próximo ícone trata basicamente de reflexões e efeitos de rotação.</big></p>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem29.png" /></p>
+		 
+		 <p align="justify"><big>Para utilizar esse recurso você precisa primeiro de um objeto qualquer e uma reta. Primeiro clique no objeto e depois na reta de reflexão para criar um objeto congruente ao primeiro e com distância igual entre reta e objeto.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem30.png" /></p>
+		 
+		 <p align="justify"><big>Primeiro você precisa criar um objeto. Depois disso crie um ponto qualquer que um novo objeto refletido em relação ao ponto irá aparecer.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem31.png" /></p>
+		 
+		 <p align="justify"><big>Para desenhar a inversão de um objeto em relação a um círculo basta clicar primeiro no objeto e depois no círculo.</big></p>
+		 <br/>
+		 <br/>	
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem32.png" /></p>
+		 
+		 <p align="justify"><big>Crie dois pontos (A e B por exemplo) e irá aparecer uma caixa onde você deve indicar a medida do ângulo e o sentido. Depois disso será criado um terceiro ponto (C) onde o ângulo indicado por você será o vértice entre os segmentos AB e BC.</big></p>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem33.png" /></p>
+		 
+		 <p align="justify"><big>Antes você precisa de um objeto e um vetor. Automaticamente irá aparecer o novo objeto transladado em relação ao vetor.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem34.png" /></p>
+		 
+		 <p align="justify"><big>Dado um objeto (segmento de reta ou polígono) clique nele e depois clique onde deseja que seja o centro da homotetia. Uma caixa vai abrir onde você precisa colocar qual é o fator pelo qual o objeto será ampliado ou reduzido. Lembrando que números decimais devem ser representados com ponto no lugar da vírgula. Por exemplo: no lugar de colocar 1,8 coloque 1.8.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem35.png" /></p>
+		 
+		 <p align="justify"><big>O próximo ícone trata basicamente de formatação e de edição.</big></p>
+		 <br/>
+		 <br/>	
+		 
+		  <p align=”Left” >
+		 <img src="imagens/04/imagem36.png" /></p>
+		 
+		 <p align="justify"><big>Ao selecionar essa opção você deve proceder da mesma maneira quando você vai inserir uma caixa de texto nos programas de edição de texto comuns, basta segurar o botão esquerdo do mouse e arrastar. Assim que você soltar o botão uma caixa irá abrir onde você vai digitar o que deseja, inserir símbolos ou algum texto em LaTeX.</big></p>
+		 <br/>
+		 <br/>	
+		 
+		 <p align=”Left” >
+		<img src="imagens/04/imagem37.png" /></p>
+		 <p align="justify"><big>Insere uma imagem do diretório de seu computador ou disco removível diretamente na área de trabalho do GeoGebra.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem38.png" /></p>
+		 
+		 <p align="justify"><big>Desenhe o que desejar. Basta segurar o botão esquerdo do mouse e arrastar pela área de trabalho. </big></p>
+		 <br/>
+		 <br/>
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem39.png" /></p>
+		 
+		 <p align="justify"><big>O programa tenta “entender” o que você quis desenhar e substitui o que você desenhou por uma figura ou objeto.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem40.png" /></p>
+		 
+		 <p align="justify"><big>Selecione dois objetos e os compare. Uma caixa irá aparecer com o resultado.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem41.png" /></p>
+		 
+		 <p align="justify"><big>Selecione uma função para estudá-la.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem42.png" /></p>
+		 
+		 <p align="justify"><big>Esse ícone trata de controle de objetos para melhor estuda-los.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem43.png" /></p>
+		 
+		 <p align="justify"><big>Uma das ferramentas mais importantes e um pouco complicada de explicá-la teoricamente. O vídeo abaixo explica bem detalhadamente o funcionamento dessa função.</big></p>
+		 <br/>
+		 <br/>		
+		 
+	 </div>
+	 
+	 <div class="linha">
+		<div class="coluna lateral">			
+			<img src="layout/video.png" width="100" height="110"/>		
+		</div>
+		<div class="coluna principal quadro ">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Y-_y9foeORs" frameborder="0" allowfullscreen></iframe>
+		</div>
+		</div>
+	
+	 
+	 <div class="linha">
+		<div class="coluna lateral">	
+		<br/>
+		</div>
+		<div class="coluna principal">
+		<br/>				
+		 <p align=”Left” >
+		<img src="imagens/04/imagem44.png" /></p>
+		 
+		 <p align="justify"><big>Cria uma caixa onde você pode exibir ou esconder o objeto selecionado previamente.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem45.png" /></p>
+		 
+		 <p align="justify"><big>Insere um botão na janela de visualização.</big></p>
+		 <br/>
+		 <br/>
+		 
+		 <p align=”Left” >
+		 <img src="imagens/04/imagem46.png" /></p>
+		 
+		 <p align="justify"><big>Cria um campo de entrada na janela de visualização para que você possa modificar o objeto ligado ao campo de entrada.</big></p>
+		 <br/>
+		 <br/>		
+		<font color = "red">FINAL DO EFEITO.</font></p>
+		 </div>
+		 </div>
+  
+	<div class="linha">
+		<div id="rodape">
+			<ul id="rodape_navegacao">
+				<li><a href="#topo" title="Retornar ao topo da página">Topo</a></li>
+				<li><a href="03.html" title="Ir para o Tópico Anterior">Tópico Anterior</a></li>
+				<li><a href="05.html" title="Ir para o Próximo Tópico">Próximo Tópico</a></li>
+
+				<li><a href="pdf/01.pdf" title="Versão para Impressão" target="_blank">Versão para Impressão</a></li>
+			</ul>
+			<a href="http://www.virtual.ufc.br" target="_blank" id="logo-ufcv" class="logo"><img src="layout/logo-ufc_virtual-color.png" alt="Logo UFC" width="40" height="40" /></a>
+			<a href="http://www.ufc.br" target="_blank" id="logo-ufc" class="logo"><img src="layout/logo-ufc-color.png" alt="Logo UFC Virtual" width="35" height="45" /></a>
+			<p>Responsável: </p>
+			<p>Centro de Educação a Distância do Ceará - CED</p>
+		</div>
+	</div>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+    </script>
+</body>
+</html>
